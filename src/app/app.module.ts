@@ -7,17 +7,22 @@ import { AppComponent } from './app.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { environment } from '../environments/environment';
-import { HomeComponent } from './components/home/home.component';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
+
+import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
+import { SignUpComponent } from './components/sign-up/sign-up.component';
+
+import { AuthService } from './services/auth/auth.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    LoginComponent
+    LoginComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +32,9 @@ import { LoginComponent } from './components/login/login.component';
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideAuth(() => getAuth()),
   ],
-  providers: [],
+  providers: [
+    AuthService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

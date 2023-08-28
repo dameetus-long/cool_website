@@ -17,6 +17,7 @@ export class AuthService {
     public ngZone: NgZone,
     public router: Router
   ) {}
+
   signIn(email: string, password: string){
     return this.afAuth
     .signInWithEmailAndPassword(email, password)
@@ -29,6 +30,15 @@ export class AuthService {
     })
     .catch((error) => {
       window.alert(error.message);
+    })
+  }
+
+  signUp(email: string, password: string){
+    return this.afAuth
+    .createUserWithEmailAndPassword(email, password)
+    .then((results) => {
+      /*this.SendVerificationMail();*/
+      console.log('User created');
     })
   }
 }
