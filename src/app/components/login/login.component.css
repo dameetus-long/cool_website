@@ -1,0 +1,48 @@
+#sign-in-div{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+    justify-content: center; 
+    height: 100%;     
+    width: 35%;
+    height: 75%;
+    background-color: yellow;
+    border-radius: 15px;  /* or 'fixed' if you want it to stay even when scrolling */
+}
+
+#content-div{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;  /*
+    /*align-items: center;  Aligns items on the cross axis (vertically for rows) */
+    height: 100%;     
+    width: 60%;
+    height: 75%;
+    background-color: red;
+    border-radius: 15px;  /* or 'fixed' if you want it to stay even when scrolling */
+}
+
+.input-group .field-group {
+    display: flex;
+    align-items: center;  /* Vertically aligns the label and input */
+    margin-bottom: 8px;  /* Spacing between each label-input pair */
+}
+
+.input-group label {
+    width: 100px; /* Adjust as necessary to ensure all labels have the same width */
+    margin-right: 8px; /* Spacing between the label and the input */
+    text-align: right; /* Makes the text of the labels align to the right, closer to the inputs */
+}
+
+.input-group input {
+    flex-grow: 1; /* Allows input to take the remaining space in the container */
+}
+

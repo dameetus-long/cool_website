@@ -1,0 +1,15 @@
+{
+  "projects": {
+    "default": "the-cool-website-v1"
+  },
+  "targets": {
+    "the-cool-website-v1": {
+      "hosting": {
+        "cool_website": [
+          "the-cool-website-v1"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}
